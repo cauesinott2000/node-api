@@ -9,10 +9,11 @@ const Model = require('./models/model');
 app.use(bodyParser.json());
 
 require('./controllers/authController')(app);
+require('./controllers/projectController')(app);
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.send('Olá Mundo!');
-});
+});*/
 
 // Get All
 app.get('/getAll', async (req, res) => {
