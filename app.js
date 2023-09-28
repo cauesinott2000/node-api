@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const Model = require('./models/model');
+const Users = require('./models/user');
 
 app.use(bodyParser.json());
 
@@ -81,6 +82,6 @@ app.delete('/delete/:id', async (req, res) => {
     }
 })
 
-app.listen(3000, () => {
-    console.log('listening on port 3000');
+app.listen(8080, () => {
+    console.log('listening on port 8080');
 });
