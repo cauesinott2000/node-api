@@ -14,6 +14,13 @@ function generateToken(params = {}) {
     });
 }
 
+const app = express()
+app.set('view-engine', 'ejs')
+
+router.get('/register', async (req,res) => {
+    res.render('register.ejs', { name: 'Fulano '})
+});
+
 router.post('/register', async (req, res) => {
     const { name } = req.body;
 
