@@ -18,7 +18,7 @@ const app = express()
 app.set('view-engine', 'ejs')
 
 router.get('/register', async (req,res) => {
-    res.render('register.ejs', { name: 'Fulano '})
+    res.render('register.ejs')
 });
 
 router.post('/register', async (req, res) => {
@@ -39,6 +39,11 @@ router.post('/register', async (req, res) => {
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed'});
     }
+});
+
+
+router.get('/authenticate', async (req,res) => {
+    res.render('login.ejs')
 });
 
 router.post('/authenticate', async (req, res) => {

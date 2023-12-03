@@ -1,6 +1,6 @@
-<h1>Cadastro</h1>
+<h1>Login</h1>
 
-<form action="/auth/register" method="POST">
+<form action="/auth/authenticate" method="POST">
     <div>
         <label for="name">Nome</label>
         <input type="text" id="name" name="name" required>
@@ -9,6 +9,6 @@
         <label for="password">Senha</label>
         <input type="password" id="password" name="password" required>
     </div>
-    <button type="submit">Cadastre</button>
+    <button type="submit">Entrar</button>
 </form>
-<a href="/auth/authenticate">Login</a>
+<a href="/auth/register">Cadastro</a>
